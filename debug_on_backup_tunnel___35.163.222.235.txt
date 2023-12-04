@@ -1,0 +1,77 @@
+mfp-aebs-ftd-ha02vs# debug crypto condition peer 35.163.222.235
+mfp-aebs-ftd-ha02vs# debug cry ikev1 255
+mfp-aebs-ftd-ha02vs# Apr 08 16:58:29 [IKEv1]IP = 35.163.222.235, IKE Initiator: New Phase 1, Intf NP Identity Ifc, IKE Peer 35.163.222.235  local Proxy Address 0.0.0.0, remote Proxy Address 0.0.0.0,  Crypto map (__vti-crypto-map-13-0-5)
+Apr 08 16:58:29 [IKEv1 DEBUG]IP = 35.163.222.235, constructing ISAKMP SA payload
+Apr 08 16:58:29 [IKEv1 DEBUG]IP = 35.163.222.235, constructing Fragmentation VID + extended capabilities payload
+Apr 08 16:58:29 [IKEv1]IP = 35.163.222.235, IKE_DECODE SENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+SENDING PACKET to 35.163.222.235
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs# debug cry Apr 08 16:58:37 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+?
+
+  ca          Set PKI debug levels
+  condition   Set IPSec/ISAKMP debug filters
+  engine      Set crypto engine debug levels
+  goid        Set crypto map GOID debug levels
+  ike-common  Set IKE common debug levels
+  ikev1       Set IKEV1 debug levels
+  ikev2       Set IKEV2 debug levels
+  ipsec       Set IPSec debug levels
+  ss-api      Set Crypto Secure Socket API debug levels
+  vpnclient   Set EasyVPN client debug levels
+mfp-aebs-ftd-ha02vs# debug cry ike
+mfp-aebs-ftd-ha02vs# debug cry ikev
+mfp-aebs-ftd-ha02vs# debug cry ikevApr 08 16:58:45 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs# undebu
+mfp-aebs-ftd-ha02vs# undebug all
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs#
+mfp-aebs-ftd-ha02vs# debug cry
+mfp-aebs-ftd-ha02vs# debug crypto ike
+mfp-aebs-ftd-ha02vs# debug crypto ipse
+mfp-aebs-ftd-ha02vs# debug crypto ipsec ?
+
+  <1-255>  Specify an optional debug level (default is 1)
+  <cr>
+mfp-aebs-ftd-ha02vs# debug crypto condition peer 35.163.222.235
+mfp-aebs-ftd-ha02vs# debug cry ikev1 255
+mfp-aebs-ftd-ha02vs# debug cry ipsec  255
+mfp-aebs-ftd-ha02vs# Apr 08 17:00:29 [IKEv1]IP = 35.163.222.235, IKE Initiator: New Phase 1, Intf NP Identity Ifc, IKE Peer 35.163.222.235  local Proxy Address 0.0.0.0, remote Proxy Address 0.0.0.0,  Crypto map (__vti-crypto-map-13-0-5)
+Apr 08 17:00:29 [IKEv1 DEBUG]IP = 35.163.222.235, constructing ISAKMP SA payload
+Apr 08 17:00:29 [IKEv1 DEBUG]IP = 35.163.222.235, constructing Fragmentation VID + extended capabilities payload
+Apr 08 17:00:29 [IKEv1]IP = 35.163.222.235, IKE_DECODE SENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+SENDING PACKET to 35.163.222.235Apr 08 17:00:37 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+mfp-aebs-ftd-ha02vs# clear ikev1 sa 35.163.222.235
+mfp-aebs-ftd-ha02vs# Apr 08 17:00:40 [IKEv1 DEBUG]IP = 35.163.222.235, IKE SA MM:1536d0b5 rcv'd Terminate: state MM_WAIT_MSG2  flags 0x00000022, refcnt 1, tuncnt 0
+Apr 08 17:00:40 [IKEv1 DEBUG]IP = 35.163.222.235, IKE SA MM:1536d0b5 terminating:  flags 0x01000022, refcnt 0, tuncnt 0
+Apr 08 17:00:40 [IKEv1 DEBUG]IP = 35.163.222.235, sending delete/delete with reason message
+Apr 08 17:00:59 [IKEv1]IP = 35.163.222.235, IKE Initiator: New Phase 1, Intf NP Identity Ifc, IKE Peer 35.163.222.235  local Proxy Address 0.0.0.0, remote Proxy Address 0.0.0.0,  Crypto map (__vti-crypto-map-13-0-5)
+Apr 08 17:00:59 [IKEv1 DEBUG]IP = 35.163.222.235, constructing ISAKMP SA payload
+Apr 08 17:00:59 [IKEv1 DEBUG]IP = 35.163.222.235, constructing Fragmentation VID + extended capabilities payload
+Apr 08 17:00:59 [IKEv1]IP = 35.163.222.235, IKE_DECODE SENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+SENDING PACKET to 35.163.222.235Apr 08 17:01:07 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+Apr 08 17:01:15 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+Apr 08 17:01:23 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+Apr 08 17:01:31 [IKEv1 DEBUG]IP = 35.163.222.235, IKE MM Initiator FSM error history (struct &0x000000ffa88fa530)  <state>, <event>:  MM_DONE, EV_ERROR-->MM_WAIT_MSG2, EV_RETRY-->MM_WAIT_MSG2, EV_TIMEOUT-->MM_WAIT_MSG2, NullEvent-->MM_SND_MSG1, EV_SND_MSG-->MM_SND_MSG1, EV_START_TMR-->MM_SND_MSG1, EV_RESEND_MSG-->MM_WAIT_MSG2, EV_RETRY
+Apr 08 17:01:31 [IKEv1 DEBUG]IP = 35.163.222.235, IKE SA MM:e5b90a2d terminating:  flags 0x01000022, refcnt 0, tuncnt 0
+Apr 08 17:01:31 [IKEv1 DEBUG]IP = 35.163.222.235, sending delete/delete with reason message
+Rule Lookup for local 10.128.0.0 to remote 0.0.0.0
+PROXY MATCH on crypto map CSM_vlan3800_map seq 1
+Rule Lookup for local 10.128.0.0 to remote 0.0.0.0
+PROXY MATCH on crypto map CSM_vlan3800_map seq 1
+Apr 08 17:01:59 [IKEv1]IP = 35.163.222.235, IKE Initiator: New Phase 1, Intf NP Identity Ifc, IKE Peer 35.163.222.235  local Proxy Address 0.0.0.0, remote Proxy Address 0.0.0.0,  Crypto map (__vti-crypto-map-13-0-5)
+Apr 08 17:01:59 [IKEv1 DEBUG]IP = 35.163.222.235, constructing ISAKMP SA payload
+Apr 08 17:01:59 [IKEv1 DEBUG]IP = 35.163.222.235, constructing Fragmentation VID + extended capabilities payload
+Apr 08 17:01:59 [IKEv1]IP = 35.163.222.235, IKE_DECODE SENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+SENDING PACKET to 35.163.222.235Apr 08 17:02:07 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+Apr 08 17:02:15 [IKEv1]IP = 35.163.222.235, IKE_DECODE RESENDING Message (msgid=0) with payloads : HDR + SA (1) + VENDOR (13) + NONE (0) total length : 192
+
+
